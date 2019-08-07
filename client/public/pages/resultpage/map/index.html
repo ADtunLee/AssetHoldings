@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trang bản đồ</title>
+    <!-- VENDORS STYLES-->
+    <link rel="stylesheet" href="../../vendor/ap8/css/style.css">
+    <link rel="stylesheet" href="../../vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.css">
+    <link rel="stylesheet" href="../../../assets/stylesheets/partials/map/bootstrap-tagsinput.css">
+    <!-- INCLUDES STYLES-->
+    <link rel="stylesheet" href="../../assets/stylesheets/index.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/pages/_resultpages.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/partials/map/filter-bar.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/partials/map/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/partials/chat/index.css">
+    <link rel="stylesheet" href="../../../assets/stylesheets/pages/_map.css">
+    <!-- INCLUDES SCRIPTS-->
+    <script src="../../vendor/jquery/jquery-3.2.1.slim.min.js"></script>
+    <script src="../../vendor/popper.js/popper.min.js"></script>
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../vendor/bootstrap-toogle/bootstrap4-toggle.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid d-none d-xl-block">
+      <div class="row flex-xl-nowrap">
+        <div class="col-4 bd-sidebar section-map__result">
+          <div class="map-result-container">
+            <div class="w-100 input-search__content collapsed" id="autoComplete__content">
+              <div class="search-input-container d-flex align-items-center">
+                <div class="search-menu">
+                  <button class="drawer-toggler" data-toggle="modal" data-target="#drawerToggleExternalContent" aria-controls="drawerToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><img src="../../../assets/img/SVG/menu.svg" alt=""></button>
+                </div>
+                <div class="search-input">
+                  <div>
+                    <input class="form-control" id="autoComplete" type="text" placeholder="Search ..." tabindex="1">
+                  </div>
+                </div>
+                <div class="search-icon"><img src="../../../assets/img/SVG/search.svg" alt=""></div>
+              </div>
+            </div>
+            <div class="seperate border-bottom mt-4 mb-2"></div>
+            <div class="search-filter-container ml-2">
+              <div class="dropdown">
+                <button class="btn dropdown-toggle search-filter--btn" id="dropdownMenuButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">S&#x1EAF;p x&#x1EBF;p theo</button>
+                <div class="dropdown-menu py-2" aria-labelledby="dropdownMenuButton">
+                  <div class="dropdown-item px-2 py-2">Action</div>
+                  <div class="dropdown-item px-2 py-2">Another action</div>
+                  <div class="dropdown-item px-2 py-2">Something else here</div>
+                </div>
+              </div>
+            </div>
+            <div class="search-result-container">
+              <!-- Search result item-->
+              <div class="search-result__item active">
+                <div class="row item-container">
+                  <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                  </div>
+                  <div class="col-8 item-details">
+                    <div class="row item-price">
+                      <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                      <p class="border-right acreage">60,78m2</p>
+                      <p class="ratio">10 x 6,8m</p>
+                    </div>
+                    <div class="item-type">
+                      <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                    </div>
+                    <div class="row item-info">
+                      <p class="border-right">Thu&ecirc;</p>
+                      <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                      <p>S&#x1ED1; th&#x1EED;a - -</p>
+                    </div>
+                    <div class="row item-detail">
+                      <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                      <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                      <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Search result item-->
+              <div class="search-result__item">
+                <div class="row item-container">
+                  <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                  </div>
+                  <div class="col-8 item-details">
+                    <div class="row item-price">
+                      <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                      <p class="border-right acreage">60,78m2</p>
+                      <p class="ratio">10 x 6,8m</p>
+                    </div>
+                    <div class="item-type">
+                      <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                    </div>
+                    <div class="row item-info">
+                      <p class="border-right">Thu&ecirc;</p>
+                      <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                      <p>S&#x1ED1; th&#x1EED;a - -</p>
+                    </div>
+                    <div class="row item-detail">
+                      <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                      <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                      <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Search result item-->
+              <div class="search-result__item">
+                <div class="row item-container">
+                  <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                  </div>
+                  <div class="col-8 item-details">
+                    <div class="row item-price">
+                      <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                      <p class="border-right acreage">60,78m2</p>
+                      <p class="ratio">10 x 6,8m</p>
+                    </div>
+                    <div class="item-type">
+                      <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                    </div>
+                    <div class="row item-info">
+                      <p class="border-right">Thu&ecirc;</p>
+                      <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                      <p>S&#x1ED1; th&#x1EED;a - -</p>
+                    </div>
+                    <div class="row item-detail">
+                      <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                      <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                      <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Search result item-->
+              <div class="search-result__item">
+                <div class="row item-container">
+                  <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                  </div>
+                  <div class="col-8 item-details">
+                    <div class="row item-price">
+                      <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                      <p class="border-right acreage">60,78m2</p>
+                      <p class="ratio">10 x 6,8m</p>
+                    </div>
+                    <div class="item-type">
+                      <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                    </div>
+                    <div class="row item-info">
+                      <p class="border-right">Thu&ecirc;</p>
+                      <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                      <p>S&#x1ED1; th&#x1EED;a - -</p>
+                    </div>
+                    <div class="row item-detail">
+                      <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                      <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                      <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Search result item-->
+              <div class="search-result__item">
+                <div class="row item-container">
+                  <div class="col-4 item-image" style="background-image: url('../../../assets/img/house-thumb.jpg')">
+                    <div class="sr-item__favorite"><img src="../../../assets/img/icon-favorite.png" alt=""></div>
+                    <div class="sr-item__non-favorite"><img src="../../../assets/img/icon-non-favorite.png" alt=""></div>
+                  </div>
+                  <div class="col-8 item-details">
+                    <div class="row item-price">
+                      <p class="border-right price">7,5 tri&#x1EC7;u</p>
+                      <p class="border-right acreage">60,78m2</p>
+                      <p class="ratio">10 x 6,8m</p>
+                    </div>
+                    <div class="item-type">
+                      <p>C&Abreve;N H&#x1ED8; CHUNG C&#x1AF;</p>
+                    </div>
+                    <div class="row item-info">
+                      <p class="border-right">Thu&ecirc;</p>
+                      <p class="border-right">S&#x1ED1; t&#x1EDD; 30</p>
+                      <p>S&#x1ED1; th&#x1EED;a - -</p>
+                    </div>
+                    <div class="row item-detail">
+                      <p><img src="../../../assets/img/SVG/bed.svg" alt=""> 10</p>
+                      <p><img src="../../../assets/img/SVG/shower.svg" alt=""> 20</p>
+                      <p><img src="../../../assets/img/SVG/direction.svg" alt=""> &Dstrok;&ocirc;ng Nam</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MAP MAINT CONTENT-->
+        <main class="col-8 bd-content section-map__content" style="background-image: url('../../../assets/img/map.png')">
+          <div class="map__content h-100">
+            <div id="map_canvas" style="width: 100%; height: 768px; padding-bottom: 10px; position: relative;"></div>
+            <!-- FILTER BAR FOR MAP-->
+            <div class="h-100" id="filterBar">
+              <div class="filterBar__container">
+                <div class="filterbar__content">
+                  <div class="w-100 filterBar__top d-flex justify-content-between">
+                    <div class="filterBar__top--additional">
+                      <div class="top-additional">
+                        <div class="top-additional__container">
+                          <div class="top-additional__content">
+                            <div class="row">
+                              <!-- Filter Type-->
+                              <div class="top-additional--filter filter-type" id="filterType">
+                                <div class="filter__content d-flex align-items-center">
+                                  <div class="filter--text filter-type--text" id="filter-type">D&#x1EF1; &aacute;n</div>
+                                  <div class="filter-type--switch d-flex align-items-center">
+                                    <div class="btn-switch">
+                                      <div class="btn-switch__container">
+                                        <div class="btn-switch__content d-flex align-items-center">
+                                          <input id="filter__switch-type" type="checkbox" checked="" data-toggle="toggle" data-on="Dự án" data-off="BĐS" data-style="btn-switch__input" data-width="49" data-height="18">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- FILTERS FOR PROJECT-->
+                              <div class="d-flex filters-project show" id="filters-project">
+                                <!-- Filter Category-->
+                                <div class="top-additional--filter filter-category filter-options-total" id="filterCategory" data-title="Loại dự án">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle d-flex text-center" data-toggle="dropdown"><span class="filter--text filter-category--text" style="max-width: 87.36px;">Lo&#x1EA1;i d&#x1EF1; &aacute;n</span></div>
+                                    <div class="dropdown-menu">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-apartment" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-apartment">Chung C&#x1B0;</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-city" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-city">&Dstrok;&ocirc; th&#x1ECB;</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-resort" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-resort">Ngh&#x1EC9; d&#x1B0;&#x1EE1;ng</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter Price-->
+                                <div class="top-additional--filter filter-price" id="filterPrice">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle d-flex" data-toggle="dropdown"> <span class="filter--text filter-category--text text-center" style="max-width: 110px;">M&#x1EE9;c gi&aacute;</span></div>
+                                    <div class="dropdown-menu">
+                                      <div class="row pricelist-range__container">
+                                        <div class="col-6 pricelist-range">
+                                          <input class="form-control input-price-min" type="text" placeholder="Min">
+                                          <div class="menu-price__min min-options">
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="5">
+                                              <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="10">
+                                              <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="15">
+                                              <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="20">
+                                              <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="25">
+                                              <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="30">
+                                              <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="35">
+                                              <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="40">
+                                              <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="45">
+                                              <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="50">
+                                              <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="55">
+                                              <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="60">
+                                              <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-6 pricelist-range">
+                                          <input class="form-control input-price-max" type="text" placeholder="Max">
+                                          <div class="menu-price__max max-options">
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="5">
+                                              <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="10">
+                                              <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="15">
+                                              <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="20">
+                                              <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="25">
+                                              <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="30">
+                                              <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="35">
+                                              <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="40">
+                                              <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="45">
+                                              <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="50">
+                                              <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="55">
+                                              <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="60">
+                                              <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <div class="dropdown-item" tabindex="-1">
+                                              <div class="dropdown-item__content"><span>Bất kỳ</span></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter Status-->
+                                <div class="top-additional--filter filter-status filter-options-radio" id="filterStatus" data-title="Tình trạng">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle filter--text filter-status--text text--center" data-toggle="dropdown" style="max-width: 88.5px;">T&igrave;nh tr&#x1EA1;ng</div>
+                                    <div class="dropdown-menu">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-inprogress" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-inprogress">&Dstrok;ang l&agrave;m</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-done" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-done">&Dstrok;&atilde; b&agrave;n giao</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-waiting" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-waiting">Ch&#x1B0;a l&agrave;m</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter Invesment-->
+                                <div class="top-additional--filter filter-invesment" id="filterInvesment">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle d-flex text--center" data-toggle="dropdown"><span class="filter--text filter-category--text" style="max-width: 100px;">Ch&#x1EE7; &dstrok;&#x1EA7;u t&#x1B0;</span></div>
+                                    <div class="dropdown-menu">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <input type="text" placeholder="Ex: Thắng lợi group">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter More-->
+                                <div class="top-additional--filter filter-more filter-options-count" id="filterMore" data-title="Thêm" data-option-count="0">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle filter--text filter-more--text text--center" data-toggle="dropdown">Th&ecirc;m</div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="handover-time">
+                                            <div class="dropdown-item--title handover-time--title">Th&#x1EDD;i gian b&agrave;n giao</div>
+                                            <div class="d-flex checkbox-radio-area">
+                                              <div class="handover-time--input-date">
+                                                <input class="filter-input-count w-100" type="text" placeholder="dd/mm/yyyy">
+                                              </div>
+                                              <div class="form-check handover-time--checkbox-before">
+                                                <input class="form-check-input" id="dropdownCheck-before" type="checkbox">
+                                                <label class="form-check-label" for="dropdownCheck-before">Tr&#x1B0;&#x1EDB;c</label>
+                                              </div>
+                                              <div class="form-check handover-time--checkbox-after">
+                                                <input class="form-check-input" id="dropdownCheck-after" type="checkbox">
+                                                <label class="form-check-label" for="dropdownCheck-after">Sau</label>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="category-info">
+                                            <div class="dropdown-item--title category-info--title">Lo&#x1EA1;i chi ti&#x1EBF;t</div>
+                                            <div class="d-flex" role="menu">
+                                              <select class="filter-input-count category-info__select custom-select" id="selectCategoryInfo">
+                                                <option value="" selected>Vui l&ograve;ng ch&#x1ECD;n</option>
+                                                <option value="1">Kh&ocirc;ng c&oacute; kh&#x1ED1;i &dstrok;&#x1EBF;</option>
+                                                <option value="2">H&#x1B0;&#x1EDB;ng ngo&#x1EA1;i</option>
+                                                <option value="3">Kh&ocirc;ng ph&acirc;n lo&#x1EA1;i</option>
+                                                <option value="4">C&oacute; kh&#x1ED1;i &dstrok;&#x1EBF;</option>
+                                              </select>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="filter-more__tags">
+                                            <div class="dropdown-item--title category-info--title">T&#x1EEB; kho&aacute;</div>
+                                            <div class="d-flex">
+                                              <input class="filter-input-count" type="text" data-role="tagsinput">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- END FILTERS FOR PROPERTIES-->
+                              <!-- FILTER FOR PROPERTIES-->
+                              <div class="d-flex filters-properties" id="filters-properties">
+                                <!-- Filter Trading-->
+                                <div class="top-additional--filter filter-trading filter-options-total" id="filterTrading" data-title="Loại giao dịch">
+                                  <div class="filter__content d-flex align-items-center">
+                                    <div class="filter-add-icon dropdown-toggle d-flex align-items-center" id="filterTradingList" data-toggle="dropdown" style="max-width: 120px;"><span class="trading-icon icon-for-sale"></span><span class="trading-icon icon-for-rent"></span><span class="trading-icon icon-for-sold"></span><span class="filter--text filter-trading--text" style="max-width: 108.7px;">Lo&#x1EA1;i giao d&#x1ECB;ch</span></div>
+                                    <div class="dropdown-menu">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-sale" type="checkbox" data-trading="sale">
+                                            <div class="form-check-icon"></div>
+                                            <label class="form-check-label" for="dropdownCheck-sale">B&Dstrok;S B&aacute;n</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-rent" type="checkbox" data-trading="rent">
+                                            <div class="form-check-icon form-check-rent"></div>
+                                            <label class="form-check-label" for="dropdownCheck-rent">B&Dstrok;S Thu&ecirc;</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-sold" type="checkbox" data-trading="sold">
+                                            <div class="form-check-icon form-check-sold"></div>
+                                            <label class="form-check-label" for="dropdownCheck-sold">&Dstrok;&atilde; b&aacute;n</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter Price-->
+                                <div class="top-additional--filter filter-price" id="filterPrice">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle filter--text filter-price--text text--center" data-toggle="dropdown">M&#x1EE9;c gi&aacute;</div>
+                                    <div class="dropdown-menu">
+                                      <div class="row pricelist-range__container">
+                                        <div class="col-6 pricelist-range">
+                                          <input class="form-control input-price-min" type="text" placeholder="Min">
+                                          <div class="menu-price__min min-options">
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="5">
+                                              <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="10">
+                                              <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="15">
+                                              <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="20">
+                                              <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="25">
+                                              <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="30">
+                                              <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="35">
+                                              <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="40">
+                                              <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="45">
+                                              <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="50">
+                                              <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="55">
+                                              <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="60">
+                                              <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-6 pricelist-range">
+                                          <input class="form-control input-price-max" type="text" placeholder="Max">
+                                          <div class="menu-price__max max-options">
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="5">
+                                              <div class="dropdown-item__content"><span>5 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="10">
+                                              <div class="dropdown-item__content"><span>10 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="15">
+                                              <div class="dropdown-item__content"><span>15 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="20">
+                                              <div class="dropdown-item__content"><span>20 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="25">
+                                              <div class="dropdown-item__content"><span>25 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="30">
+                                              <div class="dropdown-item__content"><span>30 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="35">
+                                              <div class="dropdown-item__content"><span>35 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="40">
+                                              <div class="dropdown-item__content"><span>40 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="45">
+                                              <div class="dropdown-item__content"><span>45 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="50">
+                                              <div class="dropdown-item__content"><span>50 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="55">
+                                              <div class="dropdown-item__content"><span>55 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <!-- Dropdown item-->
+                                            <div class="dropdown-item" tabindex="60">
+                                              <div class="dropdown-item__content"><span>60 tri&#x1EC7;u</span></div>
+                                            </div>
+                                            <div class="dropdown-item" tabindex="-1">
+                                              <div class="dropdown-item__content"><span>Bất kỳ</span></div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter Rooms-->
+                                <div class="top-additional--filter filter-room filter-options-radio" id="filterRoom" data-title="Tình trạng">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle d-flex text-center" data-toggle="dropdown"><span class="filter--text filter-room--text" style="max-width: 84.9px;">T&igrave;nh tr&#x1EA1;ng</span></div>
+                                    <div class="dropdown-menu">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-room-0" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-room-0">0 +</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-room-1" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-room-1">1 +</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-room-2" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-room-2">2 +</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-room-3" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-room-3">3 +</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-room-4" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-room-4">4 +</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-room-5" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-room-5">5 +</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter Properties type-->
+                                <div class="top-additional--filter filter-protype filter-options-total" id="filterProtype" data-title="Loại bất động sản">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle d-flex" data-toggle="dropdown"><span class="filter--text filter-protype--text text-center" style="max-width: 133.5px">Lo&#x1EA1;i b&#x1EA5;t &dstrok;&#x1ED9;ng s&#x1EA3;n</span></div>
+                                    <div class="dropdown-menu">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-pro-apartment" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-pro-apartment">C&abreve;n h&#x1ED9; chung c&#x1B0;</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-officetel" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-officetel">Officetel</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-shophouse" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-shophouse">Shop house</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-house" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-house">Nh&agrave; ri&ecirc;ng</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-cityhouse" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-cityhouse">Nh&agrave; ph&#x1ED1; li&#x1EC1;n k&#x1EC1;</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-villa" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-villa">Bi&#x1EC7;t th&#x1EF1;</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-condotel" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-condotel">Condotel</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-resort" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-resort">Bi&#x1EC7;t th&#x1EF1; ngh&#x1EC9; d&#x1B0;&#x1EE1;ng</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-bungalow" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-bungalow">Bungalow</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-land" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-land">&Dstrok;&#x1EA5;t n&#x1EC1;n/ &Dstrok;&#x1EA5;t d&#x1EF1; &aacute;n</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-official" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-official">To&agrave; nh&agrave; v&abreve;n ph&ograve;ng</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-hotel" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-hotel">Kh&aacute;ch s&#x1EA1;n</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content input-group">
+                                          <div class="form-check dropdown-item--checkbox">
+                                            <input class="form-check-input" id="dropdownCheck-mall" type="checkbox">
+                                            <label class="form-check-label" for="dropdownCheck-mall">Trung t&acirc;m th&#x1B0;&#x1A1;ng m&#x1EA1;i</label>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- Filter More-->
+                                <div class="top-additional--filter filter-more filter-options-count" id="filterMore" data-title="Thêm" data-option-count="0">
+                                  <div class="d-flex align-items-center filter__content">
+                                    <div class="dropdown-toggle filter--text filter-more--text text--center" data-toggle="dropdown">Th&ecirc;m</div>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="land-square">
+                                            <div class="dropdown-item--title land-square--title">Di&#x1EC7;n t&iacute;ch &dstrok;&#x1EA5;t</div>
+                                            <div class="d-flex">
+                                              <div class="form-group w-100 d-flex align-items-center">
+                                                <input class="filter-input-count form-control-range" id="landSquare" type="range" value="0" min="0" max="150" step="1">
+                                                <label class="form-control-range-label" for="landSquare">
+                                                  0+
+                                                  m&sup2;
+                                                </label>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="land-usable">
+                                            <div class="dropdown-item--title land-usable--title">Di&#x1EC7;n s&#x1EED; d&#x1EE5;ng</div>
+                                            <div class="d-flex">
+                                              <div class="form-group w-100 d-flex align-items-center">
+                                                <input class="filter-input-count form-control-range" id="landUsable" type="range" value="0" min="0" max="150" step="1">
+                                                <label class="form-control-range-label" for="landUsable">
+                                                  0+
+                                                  m&sup2;
+                                                </label>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="land-size">
+                                            <div class="land-size__container d-flex">
+                                              <div class="w-50 land-size__width">
+                                                <div class="dropdown-item--title land-size--title">Chi&#x1EC1;u ngang</div>
+                                                <div class="d-flex">
+                                                  <div class="form-group w-100 d-flex align-items-center">
+                                                    <input class="filter-input-count form-control" id="landSizeWidth" type="text" placeholder="Ex: 8m">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="w-50 land-size__long">
+                                                <div class="dropdown-item--title land-size--title text-right">Chi&#x1EC1;u d&#x1ECD;c</div>
+                                                <div class="d-flex">
+                                                  <div class="form-group w-100 d-flex align-items-center justify-content-end">
+                                                    <input class="filter-input-count form-control" id="landSizeLong" type="text" placeholder="Ex: 8m">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="house-info">
+                                            <div class="house-info__container d-flex justify-content-between">
+                                              <div class="w-30 house-bathroom">
+                                                <div class="dropdown-item--title house-info--title">Ph&ograve;ng t&#x1EAF;m</div>
+                                                <div class="d-flex">
+                                                  <div class="form-group w-100 d-flex align-items-center">
+                                                    <input class="filter-input-count form-control" id="houseBathroom" type="number" value="0">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="w-30 house-floor">
+                                                <div class="dropdown-item--title house-info--title">S&#x1ED1; t&#x1EA7;ng</div>
+                                                <div class="d-flex">
+                                                  <div class="form-group w-100 d-flex align-items-center">
+                                                    <input class="filter-input-count form-control" id="houseFloor" type="number" value="0">
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div class="w-30 house-onroad">
+                                                <div class="dropdown-item--title house-info--title">M&#x1EB7;t ti&#x1EC1;n</div>
+                                                <input class="filter-input-count form-control" id="houseOnroad" type="checkbox">
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="house-position">
+                                            <div class="house-position__container">
+                                              <div class="dropdown-item--title house-position--title">H&#x1B0;&#x1EDB;ng</div>
+                                              <div class="house-position__content d-flex flex-wrap align-items-center justify-content-between">
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionEast" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionEast">&Dstrok;&ocirc;ng</label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionWest" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionWest">T&acirc;y</label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionSouth" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionSouth">Nam</label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionNorth" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionNorth">B&#x1EAF;c</label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionEastNorth" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionEastNorth">
+                                                    &Dstrok;&ocirc;ng
+                                                    B&#x1EAF;c
+                                                  </label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionWestNorth" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionWestNorth">
+                                                    T&acirc;y
+                                                    B&#x1EAF;c
+                                                  </label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionEastSouth" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionEastSouth">
+                                                    &Dstrok;&ocirc;ng
+                                                    Nam
+                                                  </label>
+                                                </div>
+                                                <div class="d-flex w-25">
+                                                  <input class="filter-input-count form-control" id="housePositionWestSouth" type="checkbox">
+                                                  <label class="form-check-label" for="housePositionWestSouth">
+                                                    T&acirc;y
+                                                    Nam
+                                                  </label>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- dropdown item-->
+                                      <div class="dropdown-item">
+                                        <div class="dropdown-item__content">
+                                          <div class="filter-more__tags">
+                                            <div class="dropdown-item--title category-info--title">T&#x1EEB; kho&aacute;</div>
+                                            <div class="d-flex">
+                                              <input class="filter-input-count" type="text" data-role="tagsinput">
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- END FILTER FOR PROPERTIES-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- FILTERS MAP MODE-->
+                    <div class="filterBar__top--map-mode">
+                      <div class="map-mode">
+                        <div class="map-mode__container">
+                          <div class="map-mode__content">
+                            <div class="map-mode">
+                              <div class="row mode__content">
+                                <div class="select-mode mode-display">B&#x1EA3;n &dstrok;&#x1ED3;</div>
+                                <div class="select-mode mode-satellite">V&#x1EC7; tinh</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-100 filterBar__share">
+                    <div class="share_content d-flex justify-content-end">
+                      <div class="share--btn"><img src="../../../assets/img/ic-share-black.png" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="filterBar__view">
+                    <div class="street-view">
+                      <div class="street-view__container">
+                        <div class="street-view__content">
+                          <div class="street-view--item outline-location">
+                            <div class="street-view--btn outline-location__content"><img src="../../../assets/img/outline-location.png" alt=""></div>
+                          </div>
+                          <div class="street-view--item baseline-view">
+                            <div class="street-view--btn baseline-view__content"><img src="../../../assets/img/baseline-view.png" alt=""></div>
+                          </div>
+                          <div class="street-view--item road-perspective">
+                            <div class="street-view--btn road-perspective__content"><span class="fa fa-road icon"></span></div>
+                          </div>
+                          <div class="street-view--item baseline-trip">
+                            <div class="street-view--btn baseline-trip__content"><img src="../../../assets/img/baseline-trip.png" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Map notification-->
+          <div class="map-notification" id="map-notification">
+            <div class="map-notification__container">
+              <div class="d-flex map-notification__content justify-content-center">
+                <div class="notification--text">
+                  C&oacute; qu&aacute; nhi&#x1EC1;u B&Dstrok;S / D&#x1EF1; &aacute;n &dstrok;&#x1B0;&#x1EE3;c t&igrave;m th&#x1EA5;y nh&#x1B0;ng ch&#x1EC9; hi&#x1EC3;n th&#x1ECB; t&#x1ED1;i &dstrok;a 500 &dstrok;&#x1ED1;i t&#x1B0;&#x1EE3;ng, zoom in b&#x1EA3;n &dstrok;&#x1ED3; &dstrok;&#x1EC3; xem
+                  th&ecirc;m
+                </div>
+                <div class="ml-2 notification--link">&Dstrok;&atilde; hi&#x1EC3;u</div>
+                <div class="notification--background"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Map Zoom-->
+          <div class="map-zoom" id="map-zoom">
+            <div class="map-zoom">
+              <div class="d-flex flex-column map-zoom">
+                <div class="map-zoom--item map-zoom--in">
+                  <div class="map-zoom--btn zoom-in__content"><img src="../../../assets/img/baseline-in.png" alt=""></div>
+                </div>
+                <div class="map-zoom--item map-zoom--out">
+                  <div class="map-zoom--btn zoom-out__content"><img src="../../../assets/img/baseline-out.png" alt=""></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div class="map-mobile row flex-xl-nowrap d-xl-none">
+      <div class="container">
+        <div class="homepage-header_mobile d-xl-none" id="m1-header_mobile">
+          <div class="m1-header_mobile__container">
+            <div class="m1-header_mobile__content d-flex justify-content-between">
+              <div class="m1-menu_mobile__drawer d-flex align-items-center">
+                <div class="mobile-drawer__content">
+                  <div class="drawer-toggler" data-toggle="modal" data-target="#drawerToggleExternalContentMobile" aria-controls="drawerToggleExternalContentMobile" aria-expanded="false" aria-label="Toggle navigation"><img src="../../assets/img/icon-drawer.png" alt=""></div>
+                  <div class="modal fadeInRight" id="drawerToggleExternalContentMobile" tabindex="-1" role="dialog" aria-labelledby="drawerToggleExternalContentMobile" aria-hidden="true">
+                    <div class="modal-content">
+                      <nav class="mobile-navbar">
+                        <div class="mobile-navbar__content"><a class="navbar-brand" href="/"><img src="../../assets/img/asset-logo.png" alt=""></a>
+                          <div class="navbar__items">
+                            <div class="navbar--item"><a href="/ket-qua/thong-tin">Th&ocirc;ng tin</a></div>
+                            <div class="navbar--item"><a href="/ban-do">B&#x1EA3;n &dstrok;&#x1ED3;</a></div>
+                            <div class="navbar--item"><a href="/ket-qua/bang-gia">B&#x1EA3;ng gi&aacute;</a></div>
+                            <div class="navbar--item"><a href="#">Danh b&#x1EA1;</a></div>
+                            <div class="navbar--item"><a href="#">T&agrave;i nguy&ecirc;n</a></div>
+                            <div class="navbar--item"><a href="#">H&#x1ECF;i &dstrok;&aacute;p</a></div>
+                          </div>
+                        </div>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="m1-menu_mobile__items d-flex align-items-center">
+                <div class="m1-menu--item dropdown dropdown__menu-tool">
+                  <div class="dropdown-toggle" data-toggle="dropdown"><img class="img_menu" src="../../assets/img/Group 1.png" alt=""></div>
+                  <div class="dropdown-menu menu-tool">
+                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/Group 1569.png" alt=""><span class="menu-tool--text">
+                          T&iacute;nh to&aacute;n kho&#x1EA3;n
+                          vay</span></a></div>
+                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-insert_chart-24px.png" alt=""><span class="menu-tool--text">T&iacute;nh to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n</span></a></div>
+                    <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-monetization_on-24px.png" alt=""><span class="menu-tool--text">T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n</span></a></div>
+                  </div>
+                </div>
+                <div class="m1-menu--item">
+                  <div class="menu-notify"><a href="#"><img src="../../assets/img/Group 22.png" alt=""></a></div>
+                </div>
+                <div class="m1-menu--item"><a class="btn-login" href="/dang-nhap"><img src="../../assets/img/icon-avatar.png" alt=""></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="homepage-body" id="m1-body">
+          <div class="m1-body__container h-100">
+            <div class="m1-body__content h-100 d-flex flex-column justify-content-center">
+              <div class="map-mobile d-flex flex-column align-items-center"><img src="../../../assets/img/baseline-mobile.png" alt=""><span class="map-mobile-off">Mobile off</span><span class="map-mobile--notify">H&atilde;y tr&#x1EA3;i nghi&#x1EC7;m ch&#x1EE9;c n&abreve;ng n&agrave;y tr&ecirc;n desktop</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CHAT SIDEBAR-->
+    <div class="chat-sidebar collapsed d-none d-xl-block" id="chat-sidebar">
+      <div class="chat-sidebar__container">
+        <div class="chat-sidebar__content d-flex flex-column justify-content-between">
+          <!-- Chat Sidebar Top-->
+          <div class="chat-sidebar__top">
+            <div class="chat-sidebar--btn-collapse">
+              <div class="btn-expand__content">
+                <button class="btn btn-chat--expand" id="btn-chat--expand"><img src="../../../assets/img/Path 115.png" alt=""></button>
+              </div>
+            </div>
+          </div>
+          <!-- Chat Sidebar Bottom-->
+          <div class="chat-sidebar__bottom">
+            <!-- Chat list-->
+            <div class="chat-sidebar__list chat-list">
+              <div class="chat-list__container">
+                <div class="chat-list__content">
+                  <div class="chat-list__contact">
+                    <div class="chat-list--contact-items">
+                      <!-- Contact items-->
+                      <div class="contact-items contact-items__active">
+                        <!-- Contact item-->
+                        <div class="contact-item d-flex justify-content-center">
+                          <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-1.png" alt=""></div>
+                          <div class="contact-item--name">L&ecirc; &Aacute;nh H&#x1ED3;ng Nga</div>
+                          <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                        </div>
+                        <!-- Contact item-->
+                        <div class="contact-item d-flex justify-content-center">
+                          <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-2.png" alt=""></div>
+                          <div class="contact-item--name">Peter Parker</div>
+                          <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                        </div>
+                        <!-- Contact item-->
+                        <div class="contact-item d-flex justify-content-center">
+                          <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-3.png" alt=""></div>
+                          <div class="contact-item--name">Tom Hank</div>
+                          <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                        </div>
+                        <!-- Contact item-->
+                        <div class="contact-item d-flex justify-content-center">
+                          <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-4.png" alt=""></div>
+                          <div class="contact-item--name">Amy Lee Johnson</div>
+                          <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                        </div>
+                        <!-- Contact item-->
+                        <div class="contact-item d-flex justify-content-center">
+                          <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-5.png" alt=""></div>
+                          <div class="contact-item--name">Picasa Poo</div>
+                          <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                        </div>
+                      </div>
+                      <!-- Contact items-->
+                      <div class="contact-items contact-items__inactive">
+                        <!-- Contact item-->
+                        <div class="contact-item d-flex justify-content-center">
+                          <div class="contact-item--avatar"><img src="../../../assets/img/chat-avt-6.png" alt=""></div>
+                          <div class="contact-item--name">Jessica Snow</div>
+                          <div class="contact-item--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Chat message-->
+            <div class="chat-sidebar__chat-message">
+              <div class="chat-message__container">
+                <div class="chat-message__content">
+                  <div class="chat-message d-flex justify-content-center align-items-center">
+                    <div class="chat-message--icon"><img src="../../../assets/img/chat-message.png" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Chat Search-->
+            <div class="chat-sidebar__search-input">
+              <div class="search-input">
+                <div class="search-input__container">
+                  <div class="search-input__content">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="search-icon"><img src="../../../assets/img/SVG/search.svg" alt=""></div>
+                      </div>
+                      <input class="form-control" type="text" placeholder="Tìm kiếm bạn bè" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Chat pop-up-->
+            <div id="chat-sidebar__pop-up">
+              <div class="chat-popup">
+                <div class="chat-popup__container">
+                  <div class="chat-popup__content">
+                    <div class="chat-popup__items" id="chat-popup__items">
+                      <div class="chat-popup--item">
+                        <div class="chat-popup--header d-flex">
+                          <div class="chat-popup--status"><img src="../../../assets/img/icon-chat-active.png" alt=""></div><span class="ml-2 header--text">Test</span>
+                          <div class="chat-popup--close">&times;</div>
+                        </div>
+                        <div class="chat-popup--body">
+                          <div class="message-received">
+                            <div class="message-received__content row">
+                              <div class="col-2 px-0 received__content--icon"><img src="../../../assets/img/chat-avt-1.png" alt=""></div>
+                              <div class="col-10 received__content--text"><span>
+                                  KHLCNT c&#x1EE7;a Ban Qu&#x1EA3;n l&yacute; d&#x1EF1; &aacute;n &dstrok;&#x1EA7;u t&#x1B0; x&acirc;y .... KHLCNT c&#x1EE7;a S&#x1EDF; T&agrave;i ch&iacute;nh t&#x1EC9;nh H&#x1B0;ng Y&ecirc;n
+                                  cho d&#x1EF1;
+                                  &aacute;n &ldquo;Mua s&#x1EAF;m thi&#x1EBF;t b&#x1ECB; &dstrok;&#x1ECB;nh .... H&#x1EA1;ng m&#x1EE5;c: X&oacute;m Ao V&agrave;ng, C&#x1ED5; R&ugrave;a, G&ograve; Ch&egrave;, Ph&uacute;c L&#x1ED9;c, Quy&#x1EBF;t
+                                  Th&#x1EAF;ng, T&acirc;n ...</span></div>
+                              <div class="col-12 received__content--time text-right"><span>12:09 - 18/10/2019</span></div>
+                            </div>
+                          </div>
+                          <div class="message-send">
+                            <div class="message-send__content row align-items-end flex-column">
+                              <div class="message-send--text"><span>OK</span></div>
+                              <div class="message-send--time text-right"><span>1 min</span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="chat-popup--input">
+                          <div class="input-group">
+                            <input class="form-control" type="text" placeholder="Nhập tin nhắn" aria-label="Username" aria-describedby="basic-addon1">
+                            <div class="input-group-append">
+                              <div class="send-icon"><img src="../../../assets/img/icon-send.png" alt=""></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- DRAWER BAR-->
+    <div class="dt-menu__drawer d-flex align-items-center">
+      <div class="menu-drawer__content">
+        <div class="modal fadeInRight" id="drawerToggleExternalContent" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="drawerToggleExternalContent" aria-hidden="true">
+          <div class="modal-content">
+            <nav class="dt-navbar">
+              <div class="dt-navbar__content">
+                <div class="btn-drawer__toggle" data-dismiss="modal"><img src="../../assets/img/icon-chevron-right.png"></div><a class="dt-navbar--brand" href="/"><img src="../../assets/img/asset-logo.png" alt=""></a>
+                <div class="dt-navbar__user">
+                  <div class="navbar-user__content d-flex align-items-center">
+                    <div class="user--avatar"><img src="../../assets/img/icon-avatar.png" alt=""></div>
+                    <div class="user--infor">
+                      <div class="user-infor__content">
+                        <div class="user--name">Hu&#x1EF3;nh Th&#x1ECB; Di&#x1EC7;u Th&#x1B0;&#x1A1;ng</div>
+                        <div class="user--rate">
+                          <div class="user-rate__content d-flex align-items-center"><span class="user-rate__name">[Chuy&ecirc;n gia <span class="user-rate__level">4.5+</span></span><img class="user-rate__icon" src=" ../../../assets/img/SVG/star.svg" alt="">]</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="user--menu">
+                      <div class="user-menu__content d-flex align-items-center">
+                        <div class="menu--item dropdown dropdown-right dropdown__menu-tool">
+                          <div class="dropdown-toggle" data-toggle="dropdown"><img class="img_menu" src="../../assets/img/Group 1.png" alt=""></div>
+                          <div class="dropdown-menu dropdown-menu-right menu-tool">
+                            <div class="dropdown-item"><a href="#"><img src="../../assets/img/Group 1569.png" alt=""><span class="menu-tool--text">
+                                  T&iacute;nh to&aacute;n
+                                  kho&#x1EA3;n
+                                  vay</span></a></div>
+                            <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-insert_chart-24px.png" alt=""><span class="menu-tool--text">T&iacute;nh to&aacute;n hi&#x1EC7;u qu&#x1EA3; d&#x1EF1; &aacute;n</span></a></div>
+                            <div class="dropdown-item"><a href="#"><img src="../../assets/img/baseline-monetization_on-24px.png" alt=""><span class="menu-tool--text">T&agrave;i ch&iacute;nh c&aacute; nh&acirc;n</span></a></div>
+                          </div>
+                        </div>
+                        <div class="menu--item">
+                          <div class="menu-notify"><a href="#"><img src="../../assets/img/Group 22.png" alt=""></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dt-navbar__items"><a class="dt-navbar--item" href="/ket-qua/thong-tin">Th&ocirc;ng tin</a><a class="dt-navbar--item" href="/ket-qua/bang-gia">B&#x1EA3;ng gi&aacute;</a><a class="dt-navbar--item" href="#">Th&ecirc;m</a></div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../assets/scripts/index.js"></script>
+    <script src="../../../assets/scripts/bootstrap-tagsinput.min.js"></script>
+    <script src="../../assets/scripts/chat/index.js"></script>
+    <script src="../../../assets/scripts/resultpage/map/map-dist.js"></script>
+    <script src="../../vendor/auto-complete/autocomplete.js"></script>
+    <script src="../../assets/scripts/resultpage/generic.js"></script>
+    <script src="./../assets/scripts/resultpage/resultpage-autocomplete.js"></script>
+  </body>
+</html>

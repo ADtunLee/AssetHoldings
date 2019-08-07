@@ -1,0 +1,391 @@
+#filterBar {
+  position: absolute;
+  top: 20px;
+  left: 23px;
+  right: 44px;
+  z-index: 1040;
+}
+
+.filterBar__top .row {
+  margin: 0 2px;
+}
+
+.top-additional--filter {
+  border-radius: 2px;
+  opacity: 0.8;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  border: solid 0.2px #c1c1c1;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.top-additional--filter {
+  margin-left: 13px;
+}
+
+.top-additional--filter:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  border: solid 0.4px #1a73e8;
+}
+
+.filter__content {
+  position: relative;
+}
+
+.top-additional--filter .dropdown-item.active,
+.top-additional--filter .dropdown-item:active {
+  background-color: transparent;
+}
+
+.dropdown-toggle::after {
+  position: absolute;
+  top: 50%;
+  right: 9px;
+  transform: translate(50%, -50%);
+}
+
+.filter--text {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 7px 15px;
+  padding-left: 7px;
+  font-size: 14px;
+  color: #3c4043;
+  white-space: nowrap;
+  overflow: auto;
+  text-overflow: ellipsis;
+}
+
+.top-additional--filter:hover .filter--text {
+  color: #1a73e8;
+}
+
+/* Button filter type */
+.filter-type--text {
+  margin-right: 5px;
+}
+
+.btn-switch {}
+
+.btn-switch__content {
+  font-size: 10px;
+  color: #969696;
+  border-radius: 18px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #1a73e8;
+  background-color: #ffffff;
+}
+
+.btn-switch--text {
+  padding: 0 2px;
+  color: #969696;
+  opacity: 0.3;
+}
+
+.btn-switch--text:hover {
+  opacity: 0.8;
+}
+
+.btn-switch--pointer {
+  height: 15px;
+  width: 15px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #1a73e8;
+  border-radius: 50%;
+}
+
+/* Filter type */
+#filterType .filter__content {
+  padding: 0 5px;
+}
+
+#filter-type {
+  width: 51px;
+}
+
+/* FILTERS FOR PROJECT/PROPERTIES */
+#filters-project,
+#filters-properties {
+  display: none !important;
+}
+
+#filters-project.show,
+#filters-properties.show {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+/* END FILTERS FOR PROJECT/PROPERTIES */
+
+/* Filter Category */
+.dropdown-menu {
+  min-width: unset;
+}
+
+.dropdown-item {
+  padding: 0;
+}
+
+.dropdown-item__content {
+  padding: 0 7px;
+}
+
+.dropdown-item__content .form-check-label {
+  cursor: pointer;
+}
+
+.dropdown-menu .form-control:not(:first-child) {
+  margin-left: 5px;
+}
+
+.form-check {
+  padding-left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-check-input {
+  margin-left: 7px;
+  margin-top: 0.45rem;
+  cursor: pointer;
+}
+
+.form-check-label {
+  display: inline-block;
+  padding: 2px 7px;
+  padding-left: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+/* Filter price */
+#filterPrice .input-group input {
+  min-width: 100px;
+}
+#filterPrice .filter--text {
+  // min-width: 110px;
+}
+
+/* Filter Handover Time */
+.filter-more .dropdown-item {
+  margin-bottom: 10px;
+}
+
+.handover-time .d-flex>*:not(:first-child) {
+  margin-left: 25px;
+  max-width: 60px;
+}
+
+
+.dropdown-item--title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #363636;
+}
+
+.handover-time--input-date {
+  width: 100px;
+}
+
+.bootstrap-tagsinput {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.filter-more__tags .bootstrap-tagsinput {
+  width: 350px;
+  overflow-x: auto;
+}
+
+.filter-more__tags .bootstrap-tagsinput input {
+  width: 100%;
+}
+
+.filter-more__tags .bootstrap-tagsinput .tag {
+  padding: 3px;
+  font-size: 14px;
+  line-height: 1.36;
+  color: #363636;
+  border-radius: 2px;
+  background-color: #e8bb20;
+}
+
+.filter-more__tags .bootstrap-tagsinput .tag [data-role="remove"]::after {
+  content: "\00D7";
+}
+
+/* Map mode */
+.mode__content {
+  position: relative;
+  font-size: 14px;
+  color: #3c4043;
+}
+
+.select-mode {
+  padding: 9px 7px;
+  border-radius: 2px;
+  opacity: 0.8;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  border: solid 0.2px #c1c1c1;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.select-mode:hover {
+  color: #1a73e8;
+  border: solid 0.2px #1a73e8;
+}
+
+.mode-satellite {
+  border-left: solid 0.2px transparent;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  ;
+}
+
+/* FILTERS FOR PROPERTIES */
+#filterTrading {
+  .form-check-icon {
+    position: absolute;
+    margin-top: 0.6rem;
+    margin-left: 1.25rem;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #ff0200;
+  }
+  .form-check-rent {
+    background-color: #800180;
+  }
+  .form-check-sold {
+    background-color: #e8bb20;
+  }
+  .form-check-input {
+    margin-left: 3px;
+  }
+  .form-check-label {
+    padding-left: 2rem;
+  }
+  #filterTradingList {
+    & > span {
+      display: inline-block;
+      max-width: 87px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .trading-icon {
+      display: none;
+      height: 8px;
+      width: 8px;
+      margin-right: 2px;
+      border-radius: 4px;
+      background-color: #ff0200;
+      &:first-child {
+        margin-left: 5px;
+      }
+    }
+    &.has-sale .icon-for-sale {
+      display: inline-block;
+    }
+    &.has-rent .icon-for-rent {
+      display: inline-block;
+      background-color: #800180;
+    }
+    &.has-sold .icon-for-sold {
+      display: inline-block;
+      background-color: #e8bb20;
+    }
+  }
+}
+
+// Filter Room
+#filterRoom .dropdown-menu {
+  min-width: 137px;
+}
+
+.form-control-range-label {
+  color: #000000;
+  background-color: #ffffff !important;
+  opacity: 1 !important;
+  padding: 2px;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+
+.form-control-range {
+  height: 0;
+  border: solid 2px #e8bb20;
+}
+
+.form-control-range::-webkit-slider-thumb {
+  width: 24px;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--white);
+  background: #ffffff;
+  z-index: 1;
+}
+
+.form-control-range::-moz-range-thumb {
+  width: 24px;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: var(--white);
+  background: #ffffff;
+  z-index: 1;
+}
+
+.land-square .dropdown-item--title,
+.land-usable .dropdown-item--title {
+  margin-bottom: 0;
+}
+
+.land-square .form-group,
+.land-usable .form-group {
+  margin-bottom: 0;
+}
+
+.land-size input {
+  max-width: 80px;
+}
+
+.house-info input {
+  max-width: 60px;
+}
+
+.house-position__content>div {
+  padding-left: 5px;
+}
+
+.house-position .form-control {
+  width: auto;
+}
+
+.house-position label {
+  margin-bottom: 0;
+  margin-left: 5px;
+  padding-left: 0;
+}
+
+#filters-properties #filterMore .dropdown-menu {
+  width: 412px;
+}
+
+/* UPDATE STYLES */
+
+.pricelist-range__container {
+  min-width: 220px;
+}
+
+.pricelist-range {
+  padding: 0 5px;
+}
+
+.menu-price__min,
+.menu-price__max {
+  margin-top: 7px;
+  display: none;
+}

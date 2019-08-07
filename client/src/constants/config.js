@@ -1,0 +1,2 @@
+export const LIMIT_SEARCH_SUGGESTION = 10
+export const LIMIT_SEARCH_RESULT = 10
