@@ -40,15 +40,16 @@ export const changeKeyword = (newKeyword) =>{
 }
 
 //GET numberof Result
-export const REQUEST_NumberOfResult = keyword => {
+export const REQUEST_NumberOfResult = (keyword,type) => {
   return dispatch => {
     return callAPI(
-      `search/count_by_keyword?keyword=${keyword}`,
+      `search/count_by_keyword?keyword=${keyword}&type=${type}`,
       "GET",
       {}
     ).then(result => {
+      console.log(result)
       //data { total_search: number}
-      dispatch(NumberOfResult(result.data.total_search));
+      dispatch(NumberOfResult(result.data[0].total_search));
     });
   };
 };

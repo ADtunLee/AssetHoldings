@@ -7,7 +7,6 @@ class RouterIndex extends Component {
       <Router>
         <Switch>
           {indexRoute.map((route, index) => {
-              console.log(route)
             return (
               <Route
                 path={route.path}

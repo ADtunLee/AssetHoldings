@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect } from 'react-redux'
+import TotalResult from './TotalResult';
 class ListPostCategory extends Component {
     render() {
         var showPostCategory = (
@@ -33,7 +34,7 @@ class ListPostCategory extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="search-result__header-text"><span>Khoảng <span className="fw-5">1.782</span> kết quả</span></div>
+                 <TotalResult />
                 </div>
               </div>
         );

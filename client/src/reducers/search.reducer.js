@@ -3,7 +3,7 @@ var initialState = {
   keyword: "",
   displayListSuggestion:false,
   listSuggestion: [],
-  listResult: {
+  result: {
     total: 0,
     listItem: [],
     page: 1
@@ -11,7 +11,6 @@ var initialState = {
 };
 
 export const searchReducers = (state = initialState, action) => {
-  console.log(action);
   switch (action.type) {
     case actionType.SEARCH_SUGGESTION:
       return { ...state, listSuggestion: action.payload };
@@ -20,19 +19,20 @@ export const searchReducers = (state = initialState, action) => {
     case actionType.DISPLAY_LIST_SUGGESTION:
       return {...state,displayListSuggestion:action.payload}
     case actionType.COUNT_ALL_SEARCH_RESULT:
+      console.log(action)
       return {
         ...state,
-        listResult: { ...state.listResult, total: action.payload }
+        result: { ...state.result, total: action.payload }
       };
     case actionType.CHANGE_RESULT_PAGE:
       return {
         ...state,
-        listResult: { ...state.listResult, page: action.payload }
+        result: { ...state.result, page: action.payload }
       };
     case actionType.GET_LIST_SEARCH_RESULT:
       return {
         ...state,
-        listResult: { ...state.listResult, listItem: action.payload }
+        result: { ...state.result, listItem: action.payload }
       };
     default:
       return state;

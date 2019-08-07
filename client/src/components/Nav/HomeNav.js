@@ -5,7 +5,7 @@ class HomeNav extends Component {
         return (
             <div className="d-flex align-items-center ht-menu__items">
                       <div className="ht-menu--item"><a href="/ket-qua/thong-tin">Thông tin</a></div>
-                      <div className="ht-menu--item"><a href="/ban-do">Bản đồ</a></div>
+                      <div className="ht-menu--item"><a href="/map">Bản đồ</a></div>
                       <div className="ht-menu--item"><a href="/ket-qua/bang-gia">Bảng giá</a></div>
                       <div className="ht-menu--item dropdown">
                         <div className="dropdown-toggle" data-toggle="dropdown">Thêm</div>

@@ -35,11 +35,12 @@ class SearchResultNav extends Component {
                 Bản đồ
               </span>
             </NavLink>
-            <NavLink className="header-navigation--item hn-item--text">
+            <NavLink className="header-navigation--item hn-item--text"
+             to="/result/price"
+             activeClassName="is-actived">
               <span
                 className="hn-item--text"
-                href="/result/price"
-                activeClassName="is-actived"
+               
               >
                 Bảng giá
               </span>
