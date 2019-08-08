@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.13" height="32.129" viewBox="0 0 32.13 32.129">
+  <g id="Group_3110" data-name="Group 3110" transform="translate(-949.03 -373.928)">
+    <g id="Group_2964" data-name="Group 2964" transform="translate(949.03 373.928)">
+      <g id="baseline-person_pin-24px" transform="translate(0 0)">
+        <path id="Path_110" data-name="Path 110" d="M15.049,2a12.042,12.042,0,0,0-3.092,23.682l3.092,3.092,3.092-3.092A12.042,12.042,0,0,0,15.049,2Z" transform="translate(1.016 0.677)" fill="#e91b23"/>
+        <path id="Path_111" data-name="Path 111" d="M0,0H32.13V32.129H0Z" fill="none"/>
+      </g>
+    </g>
+    <g id="restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle" transform="translate(956.464 379.704)">
+      <g id="Group_2952" data-name="Group 2952">
+        <path id="Path_973" data-name="Path 973" d="M8.715,0a8.714,8.714,0,1,0,8.714,8.714A8.725,8.725,0,0,0,8.715,0Zm0,16.778a8.064,8.064,0,1,1,8.065-8.064A8.074,8.074,0,0,1,8.715,16.778Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="baseline-camera_roll-24px" transform="translate(960 383.079)">
+      <path id="Path_987" data-name="Path 987" d="M0,0H10.921V10.921H0Z" fill="none"/>
+      <path id="Path_988" data-name="Path 988" d="M7.46,2.82a.913.913,0,0,0-.91-.91H6.1V1.455A.456.456,0,0,0,5.64,1H3.82a.456.456,0,0,0-.455.455V1.91H2.91A.913.913,0,0,0,2,2.82V9.646a.913.913,0,0,0,.91.91H6.55a.913.913,0,0,0,.91-.91H11.1V2.82ZM6.55,8.736H5.64v-.91h.91Zm0-4.1H5.64V3.73h.91Zm1.82,4.1H7.46v-.91h.91Zm0-4.1H7.46V3.73h.91Zm1.82,4.1h-.91v-.91h.91Zm0-4.1h-.91V3.73h.91Z" transform="translate(-1.09 -0.545)" fill="#fff"/>
+    </g>
+  </g>
+</svg>

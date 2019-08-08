@@ -38,7 +38,7 @@ exports.CountByKeyword = async (keyword, type) => {
 
 }
 
-exports.GetSearchByKeyword = async (keyword, limit, offset, type) => {
+exports.GetSearchByKeyword = async (keyword, limit, page, type) => {
     return await res_search_string_Model
         .aggregate([
             {
@@ -47,13 +47,13 @@ exports.GetSearchByKeyword = async (keyword, limit, offset, type) => {
                     "name": new RegExp(type, 'i')
                 }
             },
-            { "$skip": offset * limit },
+            { "$skip": (page - 1) * limit },
             { "$limit": limit }
         ])
 }
 
 
-exports.GetPostByKeyword = async (keyword, limit, offset, type) => {
+exports.GetPostByKeyword = async (keyword, limit, page, type) => {
     return await res_search_string_Model
         .aggregate([
             {
@@ -67,7 +67,7 @@ exports.GetPostByKeyword = async (keyword, limit, offset, type) => {
                     "_id": "$rel_id",  // the grouping key
                 }
             },
-            { "$skip": offset * limit },
+            { "$skip": (page - 1) * limit },
             { "$limit": limit }
         ])
 }

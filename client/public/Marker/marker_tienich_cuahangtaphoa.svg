@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.13" height="32.129" viewBox="0 0 32.13 32.129">
+  <g id="Group_3109" data-name="Group 3109" transform="translate(-974.03 -451.928)">
+    <g id="Group_2953" data-name="Group 2953" transform="translate(974.03 451.928)">
+      <g id="baseline-person_pin-24px" transform="translate(0 0)">
+        <path id="Path_110" data-name="Path 110" d="M15.049,2a12.042,12.042,0,0,0-3.092,23.682l3.092,3.092,3.092-3.092A12.042,12.042,0,0,0,15.049,2Z" transform="translate(1.016 0.677)" fill="#e91b23"/>
+        <path id="Path_111" data-name="Path 111" d="M0,0H32.13V32.129H0Z" fill="none"/>
+      </g>
+    </g>
+    <g id="restaurant-cutlery-circular-symbol-of-a-spoon-and-a-fork-in-a-circle" transform="translate(981.464 457.704)">
+      <g id="Group_2952" data-name="Group 2952">
+        <path id="Path_973" data-name="Path 973" d="M8.715,0a8.714,8.714,0,1,0,8.714,8.714A8.725,8.725,0,0,0,8.715,0Zm0,16.778a8.064,8.064,0,1,1,8.065-8.064A8.074,8.074,0,0,1,8.715,16.778Z" fill="#fff"/>
+      </g>
+    </g>
+    <g id="store" transform="translate(984 413.767)">
+      <g id="Group_2955" data-name="Group 2955" transform="translate(0 48.003)">
+        <g id="Group_2954" data-name="Group 2954" transform="translate(0 0)">
+          <path id="Path_974" data-name="Path 974" d="M12.158,50.838l-1.91-2.675A.4.4,0,0,0,9.935,48H2.293a.4.4,0,0,0-.313.16L.069,50.838,0,51.044a1.531,1.531,0,0,0,1.528,1.544,1.515,1.515,0,0,0,1.146-.52,1.524,1.524,0,0,0,2.293,0,1.524,1.524,0,0,0,2.293,0,1.524,1.524,0,0,0,2.293,0,1.515,1.515,0,0,0,1.146.52,1.531,1.531,0,0,0,1.528-1.544Z" transform="translate(0 -48.003)" fill="#fff"/>
+        </g>
+      </g>
+      <g id="Group_2957" data-name="Group 2957" transform="translate(0.765 53.043)">
+        <g id="Group_2956" data-name="Group 2956">
+          <path id="Path_975" data-name="Path 975" d="M41.937,259.384a2.286,2.286,0,0,1-1.146-.309,2.342,2.342,0,0,1-2.293,0,2.342,2.342,0,0,1-2.293,0,2.342,2.342,0,0,1-2.293,0,2.323,2.323,0,0,1-1.91.16v3.97a.764.764,0,0,0,.764.764h6.113v-3.821h2.293v3.821h.764a.764.764,0,0,0,.764-.764v-3.961A2.279,2.279,0,0,1,41.937,259.384Zm-5.349,3.057H33.531v-2.293h3.057Z" transform="translate(-32.003 -259.075)" fill="#fff"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -30,33 +30,39 @@ router.get("/result", async (req, res) => {
 // keyword, limit, offset, 'type = post'
 
 router.get("/get_post_by_keyword", async (req, res) => {
+  var keyword = req.query.keyword || "";
   var limit = Number.parseInt(req.query.limit) || 10;
-
-  var offset = Number.parseInt(req.query.offset) || 0;
+  var page = Number.parseInt(req.query.page) || 1;
 
   let list_PostID = await res_searchBL.GetPostByKeyword(
-    req.query.keyword || "",
+    keyword,
     limit,
-    offset,
+    page,
     "post"
   );
   list_PostID = list_PostID.map(a => a._id);
   let list_Post = await post_BL.GetByListID(list_PostID, limit);
-
   return res.json(list_Post);
 });
 
 // lấy tất cả danh sách các từ khóa
-//INPUT : limit (giới hạn) offset, keyword, type (post,address...). type/keyword = null nếu lấy tất cả
+//INPUT : limit (giới hạn) page, keyword, type (post,res_address...). type/keyword = null nếu lấy tất cả
 router.get("/all", async (req, res) => {
+
+  //get query
+  var keyword = req.query.keyword || "";
+  var type = req.query.type || "";
   var limit = Number.parseInt(req.query.limit) || 8;
-  var offset = Number.parseInt(req.query.offset) || 0;
+  var page = Number.parseInt(req.query.page) || 1;
+
+
   let list_search = await res_searchBL.GetSearchByKeyword(
-    req.query.keyword || "",
+    keyword ,
     limit,
-    offset,
-    req.query.type || ""
+    page,
+    type
   );
+
   var list_addressID = [];
   var list_productID = [];
   var list_postID = [];

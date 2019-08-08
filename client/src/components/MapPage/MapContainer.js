@@ -1,52 +1,34 @@
 import React, { Component } from "react";
+import _ from 'lodash'
 import MapMain from './MapMain'
-const places = [
-    {
-      name: "Newcastle",
-      title: "Newcastle",
-      lat: -33.0029954,
-      lng: 147.204751,
-      id: 1
-    },
-    {
-      name: "Sydney",
-      title: "Sydney",
-      lat: -33.847927,
-      lng: 150.6517938,
-      id: 2
-    },
-    {
-      name: "Melbourne",
-      title: "Melbourne",
-      lat: -37.9722342,
-      lng: 144.7729561,
-      id: 3
-    },
-    {
-      name: "Perth",
-      title: "Perth",
-      lat: -31.9546904,
-      lng: 115.8350292,
-      id: 4
-    }
-  ];
-  
+import { connect } from 'react-redux'
 class MapContainer extends Component {
   render() {
+    var {currentAdress}= this.props;
+    var zoom = (!_.isEmpty(currentAdress)) ? 9 : 6
+    var point = (!_.isEmpty(currentAdress)) ? { lat: currentAdress.points.coordinates[1], lng: currentAdress.points.coordinates[0] } : { lat: 14.058324, lng: 108.277199 };
     return (
-        <div style={{ width: "100%", height: "100%" }}>
+
+      <div style={{ width: "100%", height: "100%" }}>
         <MapMain
-           googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCJ3OhlLAMrjzUBCU2vcHRSTlAqBc-NGTI`}
-           loadingElement={<div style={{ height: `100%` }} />}
-           containerElement={<div style={{ height: `100%` }} />}
-           mapElement={<div style={{ height: `100%` }} />}
-          center={{ lat: -33.8665433, lng: 151.1956316 }}
-          zoom={4}
-          places={places}
+          googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyCJ3OhlLAMrjzUBCU2vcHRSTlAqBc-NGTI`}
+          loadingElement={<div style={{ height: `100%` }} />}
+          containerElement={<div style={{ height: `100%` }} />}
+          mapElement={<div style={{ height: `100%` }} />}
+          zoom= {zoom}
+          point={point}
         />
       </div>
     );
   }
 }
 
-export default MapContainer;
+const mapStateToProps = (state) => {
+  return {
+    currentAdress: state.mapReducers.currentAddress,
+    listAddress: state.mapReducers.listAddressInside
+  }
+}
+
+
+export default connect(mapStateToProps, null)(MapContainer);

@@ -41,5 +41,8 @@ router.get('/find_product_by_address_id', async (req, res) => {
 
     return res.json(listProduct)
 })
-
+router.get('/product_in_bound',async(req,res)=>{
+    var listProduct = await mapBL.ProductInBound('');
+    return res.json(listProduct)
+})
 module.exports = router;

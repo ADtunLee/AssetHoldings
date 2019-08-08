@@ -87,3 +87,13 @@ exports.FindProductByPolygon = async (polygon, limit) => {
         }
     }).limit(limit)
 }
+
+exports.ProductInBound = async (box) => {
+    return await product_Model.find({
+        points: {
+            $geoWithin: {
+                $box: [[106.752417, 10.860808], [106.583576, 10.704319]]
+            }
+        }
+    }).limit(500)
+}

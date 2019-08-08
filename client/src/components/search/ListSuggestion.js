@@ -3,25 +3,12 @@ import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { changeKeyword,GetListSuggestion,DisplayListSuggestion } from "../../actions/search.action";
 class ListSuggestion extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isRedirect: false,
-      redirectPath: ""
-    };
-  }
 
-  handleOnResultClick = suggestionTitle => {
-    this.props.changeKeyword(suggestionTitle);
-    this.props.DisplayListSuggestion(false)
-    this.props.GetListSuggestion(null)
-    this.setState({
-      isRedirect: true,
-      redirectPath: `/result/all?keyword=${suggestionTitle}`
-    });
+  handleOnResultClick = suggestion => {
+    this.props.handleOnResultClick(suggestion)
   };
   render() {
-    var { filteredSuggestions } = this.props;
+    var filteredSuggestions  = this.props.ListSuggestion;
     var suggestionsListComponent;
     if (Array.isArray(filteredSuggestions) && filteredSuggestions.length) {
       suggestionsListComponent = (
@@ -33,7 +20,7 @@ class ListSuggestion extends Component {
                 data-result={suggestion.title}
                 className="autoComplete_result "
                 key={index}
-                onClick={() => this.handleOnResultClick(suggestion.title)}
+                onClick={() => this.handleOnResultClick(suggestion)}
                 tabIndex="1"
               >
                 {suggestion.title}
@@ -51,9 +38,7 @@ class ListSuggestion extends Component {
     }
     return (
       <ul id="autoComplete_results_list">
-        {this.state.isRedirect ? (
-          <Redirect to={this.state.redirectPath} />
-        ) : null}
+        
 
         {suggestionsListComponent}
       </ul>
@@ -61,11 +46,7 @@ class ListSuggestion extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    filteredSuggestions: state.searchReducers.listSuggestion
-  };
-};
+
 const mapDispatchToProps = (dispatch, props) => {
   return {
     changeKeyword: keyword => {
@@ -81,6 +62,6 @@ const mapDispatchToProps = (dispatch, props) => {
 };
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ListSuggestion);
