@@ -11,7 +11,7 @@ export const REQUEST_GetListSuggestion = (keyword, type) => {
       {}
     )
       .then(result => {
-        dispatch(GetListSuggestion(result.data, keyword));
+        dispatch(GetListSuggestion(result.data, keyword)); 
       })
       .catch(err => {
         dispatch(GetListSuggestion([]));
@@ -24,7 +24,31 @@ export const GetListSuggestion = (data) => {
     payload: data
   };
 };
+// lam
+export const GetListItem = (data) =>{
+  return {
+    type: actionType.GET_LIST_SEARCH_RESULT,
+    payload: data
+  }
+}
 
+export const REQUEST_GetListItem = (keyword, type) => {
+  return dispatch => {
+    return callAPI(
+      `search/get_post_by_keyword?keyword=${keyword}&limit=${
+        config.LIMIT_SEARCH_SUGGESTION
+      }`,
+      "GET",
+      {}
+    )
+      .then(result => {
+        dispatch(GetListItem(result.data, keyword)); 
+      })
+      .catch(err => {
+        dispatch(GetListItem([]));
+      });
+  };
+};
 export const DisplayListSuggestion =(isShow ) =>{
   return {
     type: actionType.DISPLAY_LIST_SUGGESTION,

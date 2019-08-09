@@ -9,6 +9,8 @@ class Pagination extends Component {
     var minPage = nPage > 10 ? currentPage - 4 : 1;
     minPage = minPage >= 1 ? minPage : 1;
     var isActiveClass = "";
+
+    
     for (var i = minPage; i <= maxPage; i++) {
       if (i === currentPage) {
         isActiveClass = "is-actived";
@@ -21,6 +23,7 @@ class Pagination extends Component {
         </a>
       );
     }
+    console.log(currentPage);
     return (
       <div className="rp-search-result__pagination">
         <div className="search-result__pagination-container container">
@@ -31,7 +34,7 @@ class Pagination extends Component {
             <div className="sr-pagination__items d-flex align-items-center">
              {listPage}
             </div>
-            <a className="sr-pagination--btn sr-pagination--next" href="#">
+            <a className="sr-pagination--btn sr-pagination--next" href="#"> 
               Tiếp
             </a>
           </div>

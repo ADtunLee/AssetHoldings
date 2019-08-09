@@ -1,7 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import ListSuggestion from './ListSuggestion'
+<<<<<<< Updated upstream
 import {REQUEST_GetListSuggestion,changeKeyword,DisplayListSuggestion} from '../../actions/search.action'
+=======
+import { REQUEST_GetListSuggestion, changeKeyword, DisplayListSuggestion, GetListSuggestion,REQUEST_GetListItem, GetListItem } from '../../actions/search.action'
+>>>>>>> Stashed changes
 class SearchBox extends Component {
   constructor(props) {
     super(props);
@@ -9,6 +13,21 @@ class SearchBox extends Component {
       keyword: ""
     };
   }
+<<<<<<< Updated upstream
+=======
+  handleOnResultClick = (result) => {
+    var keyword = result.title;
+    this.props.changeKeyword(keyword)
+    this.props.DisplayListSuggestion(false);
+    this.props.GetListSuggestion([])
+    this.props.GetListItem([]);
+    this.props.REQUEST_GetListItem(keyword,'')
+    this.setState({
+      isRedirect: true,
+      redirectPath: `/result/all?keyword=${keyword}`
+    })
+  } 
+>>>>>>> Stashed changes
   handleOnChange = e => {
     var target = e.target;
     var name = target.name;
@@ -49,10 +68,12 @@ class SearchBox extends Component {
 const mapStateToProps = (state)=>{
   return {
     keyword: state.searchReducers.keyword,
-    displayListSuggestion: state.searchReducers.displayListSuggestion
+    displayListSuggestion: state.searchReducers.displayListSuggestion,
+    listItem:state.searchReducers.result.listItem
   }
 }
 
+<<<<<<< Updated upstream
 const mapDispatchToProps = (dispatch,props)=>{
     return {
         REQUEST_GetListSuggestion: (keyword,type)=>{
@@ -64,6 +85,27 @@ const mapDispatchToProps = (dispatch,props)=>{
         DisplayListSuggestion:(isShow)=>{
           dispatch(DisplayListSuggestion(isShow))
         }
+=======
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    REQUEST_GetListSuggestion: (keyword, type) => {
+      dispatch(REQUEST_GetListSuggestion(keyword, type))
+    },
+    changeKeyword: (keyword) => {
+      dispatch(changeKeyword(keyword))
+    },
+    DisplayListSuggestion: (isShow) => {
+      dispatch(DisplayListSuggestion(isShow))
+    },
+    GetListSuggestion: (listSuggestion) => {
+      dispatch(GetListSuggestion(listSuggestion))
+    },
+    REQUEST_GetListItem: (keyword, type) => {
+      dispatch(REQUEST_GetListItem(keyword, type));
+    },
+    GetListItem: (listItem) => {
+      dispatch(GetListItem(listItem))
+>>>>>>> Stashed changes
     }
 }
 

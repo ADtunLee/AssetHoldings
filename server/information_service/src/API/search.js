@@ -29,7 +29,12 @@ router.get("/result", async (req, res) => {
 //GET POST (lookup user)
 // keyword, limit, offset, 'type = post'
 
+<<<<<<< Updated upstream
 router.get("/get_post_by_keyword", async (req, res) => {
+=======
+router.get("/get_post_by_keyword", async (req, res) => { 
+  var keyword = req.query.keyword || "";
+>>>>>>> Stashed changes
   var limit = Number.parseInt(req.query.limit) || 10;
 
   var offset = Number.parseInt(req.query.offset) || 0;

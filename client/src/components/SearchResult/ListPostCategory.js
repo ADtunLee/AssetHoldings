@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {connect } from 'react-redux'
 import TotalResult from './TotalResult';
 class ListPostCategory extends Component {
-    render() {
+    
+    render() { 
         var showPostCategory = (
             this.props.listPostCategory.map((postCategory, index) => {
                
@@ -27,7 +28,7 @@ class ListPostCategory extends Component {
         return (
             <div className="result-pages__header-category">
                 <div className="rs-header-category header-category__container">
-                  <div className="search-result__category">
+                  <div className="search-result__category" style={{display:`${(this.props.displayPostCategory) ? 'block' : 'none'}`} }>
                     <div className="sr-category__container">
                       <div className="sr-category__dropdown-items dropdown d-flex align-items-center">
                        {showPostCategory}
@@ -43,7 +44,8 @@ class ListPostCategory extends Component {
 
 const mapStateToProps = (state)=>{
     return {
-        listPostCategory: state.postReducers.listPostCategory
+        listPostCategory: state.postReducers.listPostCategory,
+        displayPostCategory: state.configReducers.isShowPostCategory
     }
 }
 

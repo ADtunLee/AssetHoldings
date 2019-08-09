@@ -15,7 +15,7 @@ class RouterResult extends Component {
                 key={index}
                 exact={route.exact}
               />
-            );
+            ); 
           })}
         </Switch>
       </SearchResultLayout>

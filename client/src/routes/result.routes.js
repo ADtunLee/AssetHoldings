@@ -12,4 +12,4 @@ var resultRoute = [
         component: NewResultPage
       }
 ]
-export default resultRoute
+export default resultRoute 
